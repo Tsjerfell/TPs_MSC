@@ -1,0 +1,14 @@
+p 45.0 150.0 G2_Cl1_ack 0 n
+t 170.0 145.0 AckR2 0 w n
+t 200.0 50.0 ReleaseR2 0 w n
+p 100.0 55.0 Cl1_G2_release 0 n
+p 385.0 145.0 Cl1_G2_req 0 n
+p 260.0 50.0 StockR2 1 n
+e Cl1_G2_req AckR2 1 n
+e ReleaseR2 StockR2 1 n
+e Cl1_G2_release ReleaseR2 1 n
+e StockR2 AckR2 1 n
+e AckR2 G2_Cl1_ack 1 n
+h g2TP1
+
+
