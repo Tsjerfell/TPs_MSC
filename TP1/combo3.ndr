@@ -1,0 +1,97 @@
+t 215.0 90.0 AckR1 0 w n
+t 225.0 415.0 AckR2 0 w n
+t 415.0 85.0 Ack_Cl2_R1 0 w n
+t 425.0 410.0 Ack_Cl2_R2 0 w n
+t 90.0 385.0 Cl1_enter 0 w n
+t 200.0 250.0 Cl1_exit 0 w n
+t 85.0 130.0 Cl1_req1 0 w n
+t 105.0 255.0 Cl1_req2 0 w n
+t 550.0 115.0 Cl2_enter 0 w n
+t 445.0 245.0 Cl2_exit 0 w n
+t 535.0 245.0 Cl2_req1 0 w n
+t 560.0 370.0 Cl2_req2 0 w n
+t 320.0 125.0 ReleaseR1 0 w n
+t 325.0 370.0 ReleaseR2 0 w n
+p 140.0 60.0 Cl1_G1_req 0 n
+p 315.0 75.0 StockR1 1 n
+p 160.0 165.0 G1_Cl1_ack 0 n
+p 260.0 55.0 BusyG1 0 n
+p 165.0 345.0 Cl1_G2_req 0 n
+p 150.0 450.0 G2_Cl1_ack 0 n
+p 480.0 155.0 Cl2_G1_req 0 n
+p 370.0 50.0 BusyG1Cl2 0 n
+p 490.0 50.0 G1_Cl2_ack 0 n
+p 485.0 335.0 G2_Cl2_ack 0 n
+p 40.0 315.0 Cl1_wait2 0 n
+p 130.0 315.0 Cl1_work 0 n
+p 255.0 185.0 Cl1_G1_release 0 n
+p 260.0 315.0 Cl1_G2_release 0 n
+p 125.0 195.0 Cl1_idle 1 n
+p 40.0 200.0 Cl1_wait1 0 n
+p 600.0 185.0 Cl2_wait1 0 n
+p 515.0 185.0 Cl2_work 0 n
+p 385.0 180.0 Cl2_G1_release 0 n
+p 385.0 310.0 Cl2_G2_release 0 n
+p 515.0 305.0 Cl2_idle 1 n
+p 605.0 300.0 Cl2_wait2 0 n
+p 500.0 515.0 Cl2_G2_req 0 n
+p 385.0 525.0 BusyG2Cl2 0 n
+p 260.0 540.0 BusyG2 0 n
+p 320.0 475.0 StockR2 1 n
+e ReleaseR2 StockR2 1 n
+e BusyG2 ReleaseR2 1 n
+e BusyG2Cl2 ReleaseR2 1 n
+e Cl1_G2_release ReleaseR2 1 n
+e Cl2_G2_release ReleaseR2 1 n
+e ReleaseR1 StockR1 1 n
+e BusyG1 ReleaseR1 1 n
+e BusyG1Cl2 ReleaseR1 1 n
+e Cl1_G1_release ReleaseR1 1 n
+e Cl2_G1_release ReleaseR1 1 n
+e Cl2_req2 Cl2_G2_req 1 n
+e Cl2_req2 Cl2_wait2 1 n
+e Cl2_idle Cl2_req2 1 n
+e Cl2_req1 Cl2_G1_req 1 n
+e Cl2_req1 Cl2_wait1 1 n
+e G2_Cl2_ack Cl2_req1 1 n
+e Cl2_wait2 Cl2_req1 1 n
+e Cl2_exit Cl2_G1_release 1 n
+e Cl2_exit Cl2_G2_release 1 n
+e Cl2_exit Cl2_idle 1 n
+e Cl2_work Cl2_exit 1 n
+e Cl2_enter Cl2_work 1 n
+e G1_Cl2_ack Cl2_enter 1 n
+e Cl2_wait1 Cl2_enter 1 n
+e Cl1_req2 Cl1_G2_req 1 n
+e Cl1_req2 Cl1_wait2 1 n
+e G1_Cl1_ack Cl1_req2 1 n
+e Cl1_wait1 Cl1_req2 1 n
+e Cl1_req1 Cl1_G1_req 1 n
+e Cl1_req1 Cl1_wait1 1 n
+e Cl1_idle Cl1_req1 1 n
+e Cl1_exit Cl1_G1_release 1 n
+e Cl1_exit Cl1_G2_release 1 n
+e Cl1_exit Cl1_idle 1 n
+e Cl1_work Cl1_exit 1 n
+e Cl1_enter Cl1_work 1 n
+e G2_Cl1_ack Cl1_enter 1 n
+e Cl1_wait2 Cl1_enter 1 n
+e Ack_Cl2_R2 BusyG2Cl2 1 n
+e Ack_Cl2_R2 G2_Cl2_ack 1 n
+e StockR2 Ack_Cl2_R2 1 n
+e Cl2_G2_req Ack_Cl2_R2 1 n
+e Ack_Cl2_R1 BusyG1Cl2 1 n
+e Ack_Cl2_R1 G1_Cl2_ack 1 n
+e StockR1 Ack_Cl2_R1 1 n
+e Cl2_G1_req Ack_Cl2_R1 1 n
+e AckR2 G2_Cl1_ack 1 n
+e AckR2 BusyG2 1 n
+e StockR2 AckR2 1 n
+e Cl1_G2_req AckR2 1 n
+e AckR1 G1_Cl1_ack 1 n
+e AckR1 BusyG1 1 n
+e Cl1_G1_req AckR1 1 n
+e StockR1 AckR1 1 n
+h combo3
+
+

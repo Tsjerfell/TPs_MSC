@@ -1,0 +1,12 @@
+net g2b
+tr AckR1 StockR1 Cl1_G1_req -> BusyG1 G1_Cl1_ack 
+tr AckR2 StockR2 Cl1_G2_req -> G2_Cl1_ack BusyG2 
+tr Cl1_enter G2_Cl1_ack Cl1_wait2 -> Cl1_work 
+tr Cl1_exit Cl1_work -> Cl1_G1_release Cl1_G2_release Cl1_idle 
+tr Cl1_req1 Cl1_idle -> Cl1_G1_req Cl1_wait1 
+tr Cl1_req2 G1_Cl1_ack Cl1_wait1 -> Cl1_G2_req Cl1_wait2 
+tr ReleaseR1 BusyG1 Cl1_G1_release -> StockR1 
+tr ReleaseR2 BusyG2 Cl1_G2_release -> StockR2 
+pl Cl1_idle (1)
+pl StockR1 (1)
+pl StockR2 (1)

@@ -1,0 +1,17 @@
+p 45.0 30.0 G1_Cl1_ack 0 s
+p 260.0 130.0 StockR1 1 s
+p 385.0 35.0 Cl1_G1_req 0 s
+t 200.0 130.0 ReleaseR1 0 w n
+p 100.0 125.0 Cl1_G1_release 0 s
+t 170.0 35.0 AckR1 0 w n
+p 135.0 85.0 BusyG1 0 n
+e Cl1_G1_req AckR1 1 n
+e ReleaseR1 StockR1 1 n
+e Cl1_G1_release ReleaseR1 1 n
+e StockR1 AckR1 1 n
+e AckR1 G1_Cl1_ack 1 n
+e AckR1 BusyG1 1 n
+e BusyG1 ReleaseR1 1 n
+h g1TP1
+
+

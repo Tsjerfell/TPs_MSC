@@ -1,0 +1,30 @@
+p 325.0 200.0 StockR1 1 s
+t 235.0 220.0 ReleaseR1 0 w n
+p 80.0 230.0 Cl1_G1_release 0 s
+t 220.0 135.0 AckR1 0 w n
+p 105.0 180.0 BusyG1 0 n
+p 45.0 115.0 G1_Cl1_ack 0 s
+p 415.0 115.0 Cl1_G1_req 0 s
+p 395.0 55.0 Cl2_G1_req 0 n
+t 220.0 60.0 Ack_Cl2_R1 0 w n
+p 55.0 50.0 G1_Cl2_ack 0 n
+p 140.0 85.0 BusyG1Cl2 0 n
+p 390.0 295.0 Cl2_G1_release 0 n
+t 190.0 280.0 Release_Cl2_R1 0 w n
+e BusyG1Cl2 Release_Cl2_R1 1 n
+e Release_Cl2_R1 StockR1 1 n
+e Cl2_G1_release Release_Cl2_R1 1 n
+e Ack_Cl2_R1 BusyG1Cl2 1 n
+e Cl1_G1_req AckR1 1 n
+e ReleaseR1 StockR1 1 n
+e Cl1_G1_release ReleaseR1 1 n
+e StockR1 AckR1 1 n
+e AckR1 G1_Cl1_ack 1 n
+e AckR1 BusyG1 1 n
+e BusyG1 ReleaseR1 1 n
+e Cl2_G1_req Ack_Cl2_R1 1 n
+e Ack_Cl2_R1 G1_Cl2_ack 1 n
+e StockR1 Ack_Cl2_R1 1 n
+h g1c
+
+

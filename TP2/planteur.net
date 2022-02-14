@@ -1,0 +1,7 @@
+pl champ (1) 
+pl bananier (20)
+tr rentre champ  -> table 
+tr leve   table  -> jardin 
+tr dort   jardin -> champ
+tr cueille bananier champ -> champ banane 
+tr mange table banane -> table bananier

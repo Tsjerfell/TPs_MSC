@@ -1,0 +1,9 @@
+pl champ (1) 
+pl bananier (20)
+pl energie (11)
+tr rentre energie*5 champ  -> table 
+tr leve   table energie -> jardin 
+tr dort   jardin -> lit energie*9
+tr partir lit energie*9 -> champ
+tr cueille energie bananier champ -> champ banane 
+tr mange 	table banane -> table bananier energie*2
