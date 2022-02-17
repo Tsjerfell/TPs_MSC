@@ -1,0 +1,46 @@
+t 30.0 535.0 1_ask 0 w n
+t 475.0 25.0 2_ask 0 w n
+p 60.0 470.0 idle_1 1 n
+p 495.0 100.0 idle_2 1 n
+p 495.0 570.0 idle_3 1 n
+p 100.0 545.0 wait_1 0 n
+p 410.0 65.0 wait_2 0 n
+p 385.0 350.0 forks 3 n
+t 335.0 205.0 2_work 0 w n
+t 465.0 285.0 2_rel 0 w n
+p 425.0 170.0 cs_2 0 n
+t 270.0 360.0 1_rel 0 w n
+t 325.0 465.0 1_work 0 w n
+p 190.0 465.0 cs_1 0 n
+t 495.0 410.0 3_work 0 w n
+t 435.0 485.0 3_rel 0 w n
+p 530.0 505.0 cs_3 0 n
+p 610.0 495.0 wait_3 0 n
+t 610.0 580.0 3_ask 0 w n
+e 3_rel forks 2 n
+e forks 3_work 2 n
+e 2_rel forks 2 n
+e forks 2_work 2 n
+e 1_rel forks 2 n
+e forks 1_work 2 n
+e 3_rel idle_3 1 n
+e cs_3 3_rel 1 n
+e 3_work cs_3 1 n
+e wait_3 3_work 1 n
+e 3_ask wait_3 1 n
+e idle_3 3_ask 1 n
+e 2_rel idle_2 1 n
+e cs_2 2_rel 1 n
+e 2_work cs_2 1 n
+e wait_2 2_work 1 n
+e 2_ask wait_2 1 n
+e idle_2 2_ask 1 n
+e 1_rel idle_1 1 n
+e cs_1 1_rel 1 n
+e 1_work cs_1 1 n
+e wait_1 1_work 1 n
+e 1_ask wait_1 1 n
+e idle_1 1_ask 1 n
+h philo0
+
+
